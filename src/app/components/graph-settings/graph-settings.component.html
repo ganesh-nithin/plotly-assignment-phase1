@@ -1,0 +1,10 @@
+<form [formGroup]="students">
+  <p *ngFor="let student of studentNames">
+    <mat-checkbox
+      [formControlName]="student"
+      (ngModelChange)="modifySelectedStudents()"
+      >{{ student }}</mat-checkbox
+    >
+  </p>
+  <p class="warning-messgae">{{ message }}</p>
+</form>
